@@ -1,0 +1,196 @@
+/* ------------------------------------------------------------------ */
+/* Hero — new centered layout                                          */
+/* ------------------------------------------------------------------ */
+
+.lhero {
+    padding: 4.5rem 2rem 0;
+    text-align: center;
+}
+
+.lhero-inner {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+/* Badge */
+.lhero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid #a8d5b5;
+    background: #f0faf3;
+    color: #2a7a5a;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.4rem 1.1rem;
+    border-radius: 999px;
+    margin-bottom: 2rem;
+}
+
+.lhero-badge-dot {
+    width: 7px;
+    height: 7px;
+    background: #34a853;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* Title */
+.lhero-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    margin-bottom: 1.75rem;
+}
+
+.lhero-line {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: clamp(2.75rem, 6vw, 4.25rem);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.lhero-line-dark { color: #0d1333; }
+.lhero-line-teal { color: #1a7878; }
+
+/* Subtitle */
+.lhero-subtitle {
+    font-size: 1.05rem;
+    color: var(--ink-muted);
+    line-height: 1.7;
+    margin-bottom: 2.25rem;
+}
+
+/* Actions */
+.lhero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3.5rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* Mock dashboard card                                                 */
+/* ------------------------------------------------------------------ */
+
+.lmock {
+    background: #f0f0f5;
+    border-radius: 16px;
+    padding: 1.25rem 1.5rem 1.5rem;
+    text-align: left;
+}
+
+.lmock-dots {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 1.1rem;
+}
+
+.lmock-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.lmock-dot-red    { background: #ff5f57; }
+.lmock-dot-yellow { background: #febc2e; }
+.lmock-dot-green  { background: #28c840; }
+
+/* Stats row */
+.lmock-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 0.85rem;
+}
+
+.lmock-stat {
+    padding: 1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    border-right: 1px solid var(--border);
+}
+
+.lmock-stat:last-child { border-right: none; }
+
+.lmock-stat-label {
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+}
+
+.lmock-stat-value {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    color: var(--ink);
+    line-height: 1.1;
+}
+
+.lmock-stat-plain {
+    font-size: 1.85rem;
+}
+
+.lmock-stat-sub {
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+}
+
+.lmock-red   { color: #c0392b; }
+.lmock-green { color: #27ae60; }
+
+/* Bar chart */
+.lmock-bars {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.lmock-bar-row {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.lmock-bar-label {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    font-weight: 500;
+}
+
+.lmock-bar-track {
+    height: 8px;
+    background: #e8e8ec;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.lmock-bar-fill {
+    height: 100%;
+    border-radius: 999px;
+}
+
+.lmock-bar-orange { background: #e8a020; }
+.lmock-bar-blue   { background: #4a7fd4; }
+.lmock-bar-purple { background: #7a5cb8; }
+
+/* ------------------------------------------------------------------ */
+/* Responsive                                                          */
+/* ------------------------------------------------------------------ */
+
+@media (max-width: 600px) {
+    .lhero { padding: 3rem 1rem 0; }
+    .lhero-actions { flex-direction: column; align-items: center; }
+    .lmock-stats { grid-template-columns: 1fr; }
+    .lmock-stat { border-right: none; border-bottom: 1px solid var(--border); }
+    .lmock-stat:last-child { border-bottom: none; }
+}
